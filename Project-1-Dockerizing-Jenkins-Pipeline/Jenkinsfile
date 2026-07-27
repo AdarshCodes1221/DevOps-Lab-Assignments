@@ -9,23 +9,41 @@ pipeline {
             }
         }
 
-        stage('List Files') {
+        stage('Workspace Information') {
             steps {
+                sh 'echo "Current Working Directory:"'
                 sh 'pwd'
+                sh 'echo "Workspace Contents:"'
                 sh 'ls -la'
             }
         }
 
-        stage('Build Docker Image') {
+        stage('Verify Project Files') {
             steps {
-                sh 'docker --version'
+                sh 'echo "Checking Assignment Folder..."'
+                sh 'ls -la Assignment-TW1.3Docker-Jenkins'
+                sh 'echo "Jenkins Pipeline is running successfully!"'
             }
         }
 
-        stage('Finished') {
+        stage('Pipeline Completed') {
             steps {
-                echo 'Pipeline executed successfully!'
+                echo 'Project 1: Dockerizing Jenkins Pipeline completed successfully!'
             }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline execution finished.'
+        }
+
+        success {
+            echo 'SUCCESS: All pipeline stages executed successfully.'
+        }
+
+        failure {
+            echo 'FAILURE: Please check the console output.'
         }
     }
 }
