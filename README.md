@@ -4,7 +4,8 @@
 
 - **Name:** Adarsh Jha
 - **Course:** DevOps Laboratory
-- **Repository:** DevOps-Lab-Assignments
+- **Branch: ** CSE 
+- **PRN:** 23070122261
 
 ## Repository Structure
 ```
