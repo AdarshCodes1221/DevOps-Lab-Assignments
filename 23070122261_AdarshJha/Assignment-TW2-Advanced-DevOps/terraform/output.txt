@@ -1,0 +1,5 @@
+Terraform Infrastructure as Code (IaC) Task Completed Successfully.
+
+This file was created using Terraform.
+Project: TW2 - Advanced DevOps Practices
+Application: Flask + PostgreSQL + Kubernetes + Jenkins
